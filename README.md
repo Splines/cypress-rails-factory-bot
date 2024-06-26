@@ -1,6 +1,6 @@
 <div align="center">
   <img src="https://github.com/Splines/cypress-rails-factory-bot/assets/37160523/febf4da2-5f6b-45ad-b7ec-7162ce4e9940"
-    width="600px" alt="MaMpf Logo"/>
+    width="600px" alt="Decorating header image"/>
   <h3 align="center">Cypress ❤ FactoryBot (Ruby on Rails)</h3>
 </div>
 
@@ -45,7 +45,7 @@ We've been using [cypress-on-rails](https://github.com/shakacode/cypress-on-rail
 This solution is inspired by [this great blog post by Tom Conroy](https://tbconroy.com/2018/04/07/creating-data-with-factorybot-for-rails-cypress-tests/). You can find all necessary files inside the `demo/` folder, feel free to use them in your own project (you don't have to, but you _can_ link back to this repo to let others know about it). Here's an overview of what we do. Follow these steps to apply it to your own project. The individual files are commented and should be self-explanatory.
 
 - Set up custom [**Rails routes**](./demo/config/routes.rb) (only available in the Rails test environment) with respective [**controllers**](./demo/app/controllers/) that execute the backend code, e.g. call the FactoryBot, use the DatabaseCleaner or create a new user (or anything you like). <sub>The [`cypress_controller.rb`](demo/app/controllers/cypress/cypress_controller.rb) is the base class that the other controllers inherit from. It's just there to ensure errors are sent back to the frontend, such that you can see them in Cypress in the test browser.</sub>
-- Implement a [**JS interface for Cypress**](./demo/spec/cypress/support/backend_caller.js) that allows to call these routes from the Cypress test and provide nice error logging in case anything wrong.
-- That's basically it. Now you can define [**custom Cypress commands**](./demo/spec/cypress/support/commands.js) in Cypress or even your own JS classes, e.g. the [**FactoryBot**](./demo/spec/cypress/support/factorybot.js). Import it via `import FactoryBot from "../support/factorybot";` and you're ready to use `FactoryBot.create("...")` in your Cypress tests as shown above.
+- Implement a [**JS interface for Cypress**](./demo/spec/cypress/support/backend_caller.js) that allows to call these routes from the Cypress test and provide nice error logging in case anything goes wrong.
+- That's basically it. Now you can define [**custom Cypress commands**](./demo/spec/cypress/support/commands.js) in Cypress or even your own JS classes, e.g. the [**FactoryBot**](./demo/spec/cypress/support/factorybot.js) wrapper. Import it via `import FactoryBot from "../support/factorybot";` and you're ready to use `FactoryBot.create("...")` in your Cypress tests as shown above.
 
-This solution is easily extendable and you can add more controllers, routes and custom Cypress commands as you see fit.
+This solution is easily extendable. Add more controllers, routes and custom Cypress commands as you see fit.
