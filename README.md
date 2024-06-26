@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/Splines/cypress-rails-factory-bot/assets/37160523/febf4da2-5f6b-45ad-b7ec-7162ce4e9940"
+  <img src="https://github.com/Splines/cypress-rails-factory-bot/assets/37160523/f9eaf28f-693e-4b79-ae79-993d9f04ed9c"
     width="600px" alt="Decorating header image"/>
   <h3 align="center">Cypress ❤ FactoryBot (Ruby on Rails)</h3>
 </div>
