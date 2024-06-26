@@ -1,3 +1,5 @@
+# https://github.com/Splines/cypress-rails-factory-bot
+
 module Cypress
   # Handles Cypress requests to create factories via FactoryBot.
   # See the factorybot.js file in the Cypress support folder.

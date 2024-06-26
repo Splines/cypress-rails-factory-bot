@@ -1,3 +1,5 @@
+// https://github.com/Splines/cypress-rails-factory-bot
+
 /**
  * Class to call special Cypress backend routes from Cypress frontend tests.
  */
